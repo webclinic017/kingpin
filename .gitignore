@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# VSC settings
+.vscode/
+
+# github
+.github/
+
 # C extensions
 *.so
 
