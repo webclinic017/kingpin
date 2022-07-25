@@ -2,13 +2,20 @@
 拱门爸比的数据脚本
 
 ## 开发环境Tips
-- 1、切换conda env
+- 1、创建conda env环境
+    - conda create -n kingpin python=$\color{#4285f4}{3.10}$
+- 2、切换conda env
     - conda activate env_name
-- 2、安装第三方or自定义packages
+- 3、安装项目依赖
+    - cd workspace/kingpin/
+    - python -m pip install -r requirements.txt
+
+- 4、安装第三方or自定义packages
     - cd ./packages/package_name
     - python -m pip install -e .
     - #e=editable 既修改package代码也能生效
-- 3、命令行运行忽略 ignore信息
+
+- 5、命令行运行忽略 ignore信息
     - python -W ignore file.py
 
 ## VSC 配置
@@ -26,6 +33,15 @@
         - .vscode/
         - .github/
 
+## CUDA 
+- 1、安装（对应conda env环境)
+    - conda install cudatoolkit
+    - conda install cudnn
+- 2、验证安装成功
+    
+    `#python`
 
+    `import totch`
 
+    `print(torch.cuda.is_avable())`
 
