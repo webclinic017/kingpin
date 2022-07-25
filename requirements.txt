@@ -1,3 +1,7 @@
+# source:aliyun
+# -i http://mirrors.aliyun.com/pypi/simple/
+# --trusted-host mirrors.aliyun.com
+
 # DRL env
 gym
 
@@ -8,6 +12,14 @@ torch
 numpy
 
 # plot/simulation
-matplotlib
+matplotlib==3.2.2  #兼容backtrader ImportError
 
 # profiling
+
+# backtesting 
+backtrader
+
+# data src
+akshare
+easyquotation
+
