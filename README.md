@@ -18,6 +18,31 @@
 - 5、命令行运行忽略 ignore信息
     - python -W ignore file.py
 
+- 6、Debian系统 sans-serif 字体缺失，plot无法显示中文
+    - [SimHei 下载地址](http://www.fontpalace.com/font-download/simhei)
+    - 获取对应字体文件夹路径
+        - python -c "import matplotlib as p;print(p.matplotlib_fname())"
+        - 根据mpl-data路径找到 mpl-data/fonts/ttf
+        - 把字体文件copy至ttf目录
+    - 删除matplotlib缓存
+        - python -c "import matplotlib as p;print(p.get_cachedir())"
+        - rm -rf cache_path
+    - 修改matplotlibrc文件
+        - 根据mpl-data路径找打 mpl-data/matplotlibrc 
+        - vim mpl-data/matplotlibrc
+        > \# 修改的内容
+
+        > font.family: sans-serif
+
+        > \# 去掉前面的#，并在冒号后面添加SimHei
+
+        > font.sans-serif : SimHei, DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+        
+        > \# 去掉前面的#，并将True改为False
+        
+        > axes.unicode_minus  : False
+        
+
 ## VSC 配置
 - 1、工作区下配置文件 
     - .vscode/settings.json
