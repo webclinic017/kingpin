@@ -1,17 +1,12 @@
 """
     akshare 用例
 """
-from datetime import datetime
-from tracemalloc import start
+from datetime import datetime #
 
-from matplotlib import style
-
-import backtrader as bt 
-import matplotlib.pyplot as plt
-import akshare as ak
-import pandas as pd
-
-from numpy import sctype2char
+import backtrader as bt # 
+import matplotlib.pyplot as plt #
+import akshare as ak #
+import pandas as pd #
 
 plt.rcParams["font.sans-serif"] = ["SimHei"]  #中文, 雅黑 Microsoft YaHei
 plt.rcParams["axes.unicode_minus"] = False  #负数坐标轴

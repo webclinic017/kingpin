@@ -9,17 +9,22 @@ gym
 torch
 
 # data handling
-numpy
+pandas
+#numpy
+
+# backtesting 
+backtrader
 
 # plot/simulation
 matplotlib==3.2.2  #兼容backtrader ImportError
 
 # profiling
-
-# backtesting 
-backtrader
+quantstats
+#pyfolio
 
 # data src
 akshare
+# 实时行情 sina/tencent  集思录etf[optional]
 easyquotation
-
+# 通达信[optional]
+mootdx

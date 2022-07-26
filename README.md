@@ -31,16 +31,13 @@
         - 根据mpl-data路径找打 mpl-data/matplotlibrc 
         - vim mpl-data/matplotlibrc
         > \# 修改的内容
-
-        > font.family: sans-serif
-
-        > \# 去掉前面的#，并在冒号后面添加SimHei
-
-        > font.sans-serif : SimHei, DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
-        
-        > \# 去掉前面的#，并将True改为False
-        
-        > axes.unicode_minus  : False
+        <br>font.family: sans-serif
+        <br>
+        <br>\# 去掉前面的#，并在冒号后面添加SimHei
+        <br>font.sans-serif : SimHei, DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+        <br>
+        <br>\# 去掉前面的#，并将True改为False
+        <br>>axes.unicode_minus  : False
         
 
 ## VSC 配置
