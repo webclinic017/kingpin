@@ -9,6 +9,9 @@ __pycache__/
 # github
 .github/
 
+# tmp and cache dir
+tmp/
+
 # C extensions
 *.so
 

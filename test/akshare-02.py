@@ -136,10 +136,17 @@ def main(symbol="000001", start_date:datetime=None, end_date:datetime=None,
     print(f"净收益: {round(pnl, 2)}")
 
     # cerebro.plot(style='candlestick')
+    # use quantstats
     protfolio_stats = backbro[0].analyzers.getbyname('PyFolio')
     returns, positions, transaction, gross_lev = protfolio_stats.get_pf_items()
     returns.index = returns.index.tz_convert(None)
-    qs.reports.html(returns, output='stats.html', title="code:{} whit quantstats".format(symbol))    
+
+    import os
+    download_filename = "quantstats-" + str(symbol) + ".html"
+    download_filename = os.path.join(os.path.pardir, 'tmp', download_filename)
+    
+    qs.reports.html(returns, output=True, 
+                    download_filename=download_filename, title="code:{} 中文中文 quantstats".format(symbol))    
      
     
 #END def main
